@@ -14,7 +14,7 @@ module.exports = function (inputEmail, inputSubject, inputBody) {
 
       //
       oauth2Client.setCredentials({
-          refresh_token: process.env.ACCESS_TOKEN,
+          refresh_token: process.env.REFRESH_TOKEN,
       });
 
       const accessToken = oauth2Client.getAccessToken();
@@ -27,7 +27,7 @@ module.exports = function (inputEmail, inputSubject, inputBody) {
               user: process.env.SENDER_EMAIL,
               clientId: process.env.CLIENT_ID,
               clientSecret: process.env.SECRET_KEY,
-              refreshToken: process.env.ACCESS_TOKEN,
+              refreshToken: process.env.REFRESH_TOKEN,//enter refresh token if availabel auth success or generate new access token
               accessToken: accessToken,
           },
           tls: {
