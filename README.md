@@ -1,5 +1,5 @@
 # emailsender-auth-api
-# this project is built with gmail-api,nodemailer and node.js
+# this project is built with Express, gmail-api,nodemailer and node.js
 
 End ponit to send message :
 POST     http://localhost:3000/mail
